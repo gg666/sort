@@ -1,0 +1,199 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+body {
+	background: #000;
+	overflow: hidden;
+}
+
+input[type="range"] {
+	-webkit-box-shadow: 0 1px 0 0px #424242, 0 1px 0 #060607 inset, 0px 2px
+		10px 0px black inset, 1px 0px 2px rgba(0, 0, 0, 0.4) inset, 0 0px 1px
+		rgba(0, 0, 0, 0.6) inset;
+	margin-top: 2px;
+	background-color: #272728;
+	border-radius: 15px;
+	width: 160px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	cursor: default;
+	top: 1px;
+	height: 9px;
+	width: 20px;
+	background: none repeat scroll 0 0 #777;
+	border-radius: 15px;
+	-webkit-box-shadow: 0 -1px 1px black inset;
+}
+
+.ui-left {
+	margin: 71px 30px 30px;
+	display: inline-block;
+}
+
+.ui-right {
+	padding: 0 10px 30px 10px;
+	float: right;
+	margin: 86px 20px 0 0;
+	display: inline-block;
+	background-color: #222;
+	float: right;
+}
+
+.ui-right  div {
+	margin: 30px 0;
+}
+
+.ui-right .btn1 {
+	text-align: center;
+}
+
+.ui-right .btn2 {
+	float: right;
+}
+
+.ui-right button {
+	padding: 0 5px;
+}
+
+.ui-right {
+	color: #fff;
+}
+
+.ui input[type=radio] {
+	display: none;
+}
+
+.ui .button-set {
+	font-size: 0px;
+	margin: 5px 5px;
+	position: fixed;
+	z-index: 3;
+}
+
+.ui label .button {
+	cursor: pointer;
+	display: inline-block;
+	background: #eee;
+	padding: 6px 8px;
+	border-right: 1px solid #bbb;
+	font-size: small;
+	border-bottom: 1px solid rgb(51, 51, 51);
+	border-top: 1px solid rgb(51, 51, 51);
+}
+
+.ui label:first-child .button {
+	border-left: 1px solid rgb(51, 51, 51);
+}
+
+.ui label:last-child .button {
+	border-right: 1px solid rgb(51, 51, 51);
+	background: rgb(107, 195, 13);
+	color: #fff;
+	width: 55px;
+	text-align: center;
+}
+
+.ui .button:HOVER {
+	background: #ccc;
+}
+
+.ui input:checked+.button {
+	background: #333;
+	color: #fff;
+}
+
+.ui input[type=range] {
+	position: relative;
+	top: 7px;
+}
+
+#tooltip {
+	background: #ff0;
+	position: absolute;
+	padding: 3px;
+	color: #000;
+	display: none;
+}
+
+#dot {
+	position: absolute;
+	display: none;
+}
+
+#dot img {
+	width: 15px;
+	height: 15px;
+}
+
+.rButton {
+	color: #000;
+	cursor: pointer;
+	font-size: small;
+	padding: 2px 6px;
+	background: #eee;
+	border: 1px solid #000;
+}
+
+.rButton:HOVER {
+	background-color: #ccc;
+}
+
+#log_button {
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 5;
+	background-color: rgb(107, 195, 13);
+	cursor: pointer;
+	color: #fff;
+}
+#myData {
+	width: 250px;
+} 
+
+#log_console {
+	z-index: 4;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	background-color: #000;
+	display: none;
+	overflow: auto;
+	color: #fff;
+	padding: 5px;
+}
+
+#detail {
+	width: 100%;
+	border: 0;
+	height: 100%;
+	position: fixed;
+	top: -100%;
+	z-index: 2;
+}
+
+.blur {	
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+/*
+2  wiki 
+3  button detail_button
+4  log
+5  log_button
+*/

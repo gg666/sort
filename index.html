@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="排序,可视化">
+        <meta name="description" content="各种排序算法的可视化研究与实现">
+        <title>各种排序算法的可视化研究与实现</title>
+		<link rel="stylesheet" type="text/css" media="screen,print" href="index.css" />
+		<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+		<script src="knockout-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+<body>
+	<div id="log">
+		<span id="log_button">log</span>
+		<div id="log_console"></div>
+	</div>
+	<div class="ui">
+		<div class="ui-top">
+			<div data-bind="foreach: algorithmList" class="button-set">
+				<label  > 
+					<input type="radio" data-bind="checkedValue: $data.name, checked: $root.algorithm"> 
+					<span data-bind="text: $data.name" class="button" onselectstart="return false" style="-moz-user-select:none;"></span>
+				</label>
+			</div>
+		</div>
+		<div class="ui-left">
+			<canvas id="canvas" width="600" height="477"></canvas>
+		</div>
+		<div class="ui-right">
+			<div class="btn1">
+				 <span id="run" class="rButton" onselectstart="return false" style="-moz-user-select:none;">运行(enter)</span>
+				&emsp;<span id="step" class="rButton" onselectstart="return false" style="-moz-user-select:none;">下一步(space)</span>
+				<span id="stepLength"></span>
+			</div>
+			<div>
+				速度：<input type="range" min="1" max="20"  data-bind="value: speed"> 
+				<span data-bind="text:speed"></span>
+			</div>
+			<div>
+				 长度：<input type="range" min="5" max="100" data-bind="value: size"> 
+				<input type="text" data-bind="value:size" maxlength="4" size="4" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')"></input>
+			</div>
+			原始排列：
+			<span id="reset" class="btn2 rButton" onselectstart="return false" style="-moz-user-select:none;">随机生成排列</span><br /><br />
+			<textarea rows="9" cols="40" id="myData"></textarea>
+			<br><span id="update" class="btn2 rButton" onselectstart="return false" style="-moz-user-select:none;">更改</span>
+		</div>
+	</div>
+	<div id="tooltip"></div>
+	<div id="dot">
+		<img src="dot.png" />
+	</div>
+	<iframe src="" id="detail"></iframe>
+	<script type="text/javascript" src="graph.js"></script>
+	<script type="text/javascript" src="vm.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="sortAlgorithm.js"></script>
+</body>
+</html>
